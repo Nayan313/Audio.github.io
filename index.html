@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <link rel="shortcut icon" href="../contant/png/tab-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="#" class="lgn-section">
+            <div class="logo-section"> <img src="../contant/png/logo.svg" alt="" class="logo">
+            </div>
+            <h1><i>A</i>udio</h1>
+        </a>
+        <div class="icon-section">
+            <a href="#" class="icons">
+                <img src="../contant/svg/home.svg" alt="">
+                <p>Home</p>
+            </a>
+            <a href="#" class="icons">
+                <img src="../contant/svg/search.svg" alt="">
+                <p>Search</p>
+            </a>
+        </div>
+        <div class="library-section">
+            <a href="#" class="library-icons">
+                <img src="./contant/svg/library.svg" alt="">
+                <p>Your Library</p>
+            </a>
+            <div class="library-section-song">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="player">
+        <div class="song-player-container">
+            <div alt="img" class="playerImg" id="POSTER">
+                <img src="./Music-poster/diwali.jpeg" alt="ss"></img>
+            </div>
+            <div class="info-player-song">
+                <p class="playerName">Diwali</p>
+                <p class="playerAlbum">Apurva</p>
+            </div>
+        </div>
+        <div class="player-controller">
+            <div class="player-ctr-1" id="player-ctr">
+                <div class="bar1" id="bar1">
+                    <input type="range" min="0" max="100" class="seekControl">
+                    <div class="seek" id="seek"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="player-ctr-2" id="player-ctr">
+                <p id="CurrentStart" class="player-time">0:00</p>
+                <div class="ctr-icon">
+                    <button class="PrevBtn"><img src="./contant/svg/prev.svg" alt=""></button>
+                    <button class="playbtn" onclick="Play()"><img src="./contant/svg/play.svg" alt=""></button>
+                    <button class="pausebtn" onclick="Pause()"><img src="./contant/svg/pause.svg" alt=""></button>
+                    <button class="NextBtn"><img src="./contant/svg/next.svg" alt=""></button>
+                </div>
+                <p id="CurrentEnd" class="player-time">0:00</p>
+            </div>
+        </div>
+        <div class="volume-section">
+            <button class="FullBtn" onclick="FullPlayer()">F</button>
+            <button class="FullCloseBtn" onclick="FullPlayerClose()">Exit Screen</button>
+        </div>
+        <div class="Lyrics">
+            <p>Currently lyrics is not available</p>
+        </div>
+    </div>
+
+
+
+    <div class="mobile-player">
+        <div class="upper-part">
+            <div class="MobileImg">
+                <img src="./Music-poster/diwali.jpeg" alt="ss"></img>
+            </div>
+            <div class="detail">
+                <p class="mobileName">Diwali</p>
+                <p class="mobileAlbum">Apurva</p>
+            </div>
+            <div class="controllar">
+                <button class="playbtn1" onclick="Play1()"><img src="./contant/svg/play.svg" alt=""></button>
+                <button class="pausebtn1" onclick="Pause1()"><img src="./contant/svg/pause.svg" alt=""></button>
+            </div>
+        </div>
+        <div class="bottom-part">
+            <div class="bar11" id="bar11">
+                <input type="range" min="0" max="100" class="seekControl">
+                <div class="seek11" id="seek11"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="fullScreenPlayer">
+        <div class="fullBack"></div>
+        <!-- <img src="./poster/diwali.jpg" alt=""> -->
+        </div>
+
+
+        </div>
+    </section>
+    <section class="section-main">
+        <section class="main">
+            <div class="title-bar">
+                <h1 class="title" id="title"></h1>
+                <div class="left-right-icon-section">
+                    <img src="./contant/svg/left.svg" alt="" class="left-icon" id="left-right-icon">
+                    <img src="./contant/svg/right.svg" alt="" class="right-icon" id="left-right-icon">
+                </div>
+            </div>
+
+            <div class="new-card-section">
+
+                <div class="card">
+                    <img src="./poster/diwali.jpg" alt="" class="main-card-img">
+                    <div class="main-card-detail">
+                        <div class="main-name">
+                            <h6 class="card-name">Diwali</h6>
+                            <p class="card-singer-name">Vishal mishra</p>
+                        </div>
+                        <div class="song-play-btn" id="1">
+                            <div class="play-button" id="1">
+                                <img src="./contant/svg/play.svg" alt="" id="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./poster/aaj.jpg" alt="" class="main-card-img">
+                    <div class="main-card-detail">
+                        <div class="main-name">
+                            <h6 class="card-name">Aaj ke baad</h6>
+                            <p class="card-singer-name">Arijit singh</p>
+                        </div>
+                        <div class="song-play-btn" id="2">
+                            <div class="play-button" id="2">
+                                <img src="./contant/svg/play.svg" alt="" id="2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./poster/chaleya.jpg" alt="" class="main-card-img">
+                    <div class="main-card-detail">
+                        <div class="main-name">
+                            <h6 class="card-name">Chaleya</h6>
+                            <p class="card-singer-name">Singer</p>
+                        </div>
+                        <div class="song-play-btn" id="4">
+                            <div class="play-button" id="4">
+                                <img src="./contant/svg/play.svg" alt="" id="4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./poster/Kesariya.jpg" alt="" class="main-card-img">
+                    <div class="main-card-detail">
+                        <div class="main-name">
+                            <h6 class="card-name">Kesariya</h6>
+                            <p class="card-singer-name">Arijit singh</p>
+                        </div>
+                        <div class="song-play-btn" id="5">
+                            <div class="play-button" id="5">
+                                <img src="./contant/svg/play.svg" alt="" id="5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="song">
+            <div class="btn-section">
+                <button onclick="TopSongActiveBtn()" class="choose-btn" id="TopBtn-active">top song</button>
+                <button onclick="EnglishPartActiveBtn()" class="" id="EnglishBtn-active">english</button>
+                <button onclick="NewReleasedActiveBtn()" class="" id="NewBtn-active">new released</button>
+                <button onclick="HindiPartActiveBtn()" class="" id="HindiBtn-active">hindi</button>
+            </div>
+
+            <section class="top-song" id="song-main-section">
+                <div class="loader">
+                    <div class="wrapper">
+                        <div class="circle"></div>
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                        <div class="line-3"></div>
+                        <div class="line-4"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="new-released" id="song-main-section">
+
+            </section>
+            <section class="hindi-main-part" id="song-main-section">
+
+            </section>
+            <section class="english-main-part" id="song-main-section">
+
+            </section>
+        </section>
+    </section>
+    <script src="js/index.js"></script>
+    <script src="js/musicdb.js"></script>
+    <script src="js/music.js"></script>
+    <!-- <script src="database/card.js"></script> -->
+</body>
+
+</html>
